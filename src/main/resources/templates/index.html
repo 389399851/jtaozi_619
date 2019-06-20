@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<style type="text/css">
+    h2{
+        background-color:gray;
+        height: 50px;
+    }
+</style>
+</head>
+<body>
+<div align="center">
+    <h2>欢迎来到主页面</h2>
+    <img src="http://pic.58pic.com/58pic/13/17/94/93r58PICQiY_1024.jpg">
+</div>
+<div>
+
+</div>
+</body>
+<script type="text/javascript">
+    $('.btn-info').on('click',function(){
+        $.message({
+            message:'信息提醒',
+            type:'info'
+        });
+    })
+    $('.btn-success').on('click',function(){
+        $.message({
+            message:'成功提示',
+            type:'success'
+        });
+    })
+    $('.btn-warning').on('click',function(){
+        $.message({
+            message:'警告提示',
+            type:'warning',
+            duration:0,
+            showClose:true,
+            center:true,
+            onClose:function(){alert('知道了')}
+        });
+    })
+    $('.btn-danger').on('click',function(){
+        $.message({
+            message:'失败提示',
+            type:'error'
+        });
+    })
+    message:' 操作成功',    //提示信息
+        duration:'5000',       //显示时间（默认：5s）
+        type:'info',           //显示类型，包括4种：success.error,info,warning 默认info
+        showClose:false,       //显示关闭按钮（默认：否）
+        center:true,           //页面竖直居中（默认：否）
+        onClose:function,      //点击关闭回调函数
+</script>
+</html>
